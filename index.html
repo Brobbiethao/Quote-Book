@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quote Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller='mainCtrl'>
+  <div class="top">
+  <input type="text" placeholder="Add a new Quote!" ng-model='newQuoteText' class="filler">
+  <input type="text" placeholder="Add the Quote Author!" ng-model='newQuoteAuthor' class="filler"/>
+  <button ng-click="addQuote()"><img src="http://www.pluspunkt.cc/wp-content/themes/pluspunkt2/img/pluspunkt-icon-web.png" width="40px" height="40pxs"></button>
+  </div>
+  <div class="Filter">
+  <input type="text" placeholder="Search by text" ng-model="filterText"/>
+  </div>
+  <div class="content">
+    <ul>
+      <li ng-repeat='quote in quotes | filter : filterText'>
+        <span class="quotes">"</span>{{quote.text}}<span>"</span>
+        <span class="author">{{quote.author}}</span>
+        <button ng-click="deleteQuote(quote.text)"><img src="https://www.iconfinder.com/data/icons/tools-solid-icons-vol-2/72/59-512.png" width="40px" height="40px"></button>
+      </li>
+    </ul>
+  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+<script src="app.js" charset="utf-8"></script>
+<script src="ctrl.js" charset="utf-8"></script>
+<script src="service.js"></script>
+</body>
+</html>

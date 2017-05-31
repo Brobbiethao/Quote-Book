@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+  font-size: 40px;
+  background-color: #093145;
+  border-radius: 0 0 40px 0;
+  border-style: solid;
+  border-color: #3c6478;
+  color: white;
+}
+
+button {
+  float: right;
+}
+
+span {
+  font-size: 45px;
+  font-family: serif;
+  color: white;
+}
+
+.author {
+  color: gray;
+}
+
+.class {
+  display: inline-flex;
+}
+
+.Filter {
+  font-size: 45px;
+  font-family: serif;
+  background-color: #093145;
+  color: white;
+}
+
+input {
+  font-size: 45px;
+  font-family: serif;
+  align-items:center;
+  margin: 5px;
+}
+
+.filler {
+
+}
+
+.top {
+  background-color: #093145;
+}
